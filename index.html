@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rental Agency</title>
+    <title>Car Rental Agency</title>
+    <link rel="shortcut icon" href="images-using/BMW-m2.jpg" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Chonburi' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
@@ -29,92 +30,157 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex">
                 <li class="nav-item pl-5">
-                    <a class="nav-link" href="#home">
+                    <a id="home-link" class="nav-link" href="#home">
                         <h4>Home</h4>
                     </a>
                 </li>
                 <li class="nav-item pl-5">
-                    <a class="nav-link" href="#first-item">
+                    <a class="nav-link" href="#inventory">
                         <h4 id="inventoryLink">Inventory</h4><span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item pl-5">
-                    <a class="nav-link" href="#">
+                    <a id="cart-link" class="nav-link" href="#form-inputs">
                         <h4><i class="fas fa-shopping-cart"></i> Cart</h4>
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div id="first-item" class="container">
-        <div class="row">
-            <div class="mt-5 col-sm">
-                <div id="insert-template-here">
-
-                </div>
-            </div>
+    <div id="home" class="container col-sm text-center mt-5">
+        <div class="card">
+            <h1 class="font-weight-bold">Rental Car Agency</h1>
+            <p>This is a store that you can "rent" cars from</p>
         </div>
     </div>
-    <script id="template-inventory" type="text/x-handlebars-template">
-        <div class="text-center card mb-4">
-            <div class="card-body pb-4">
-                <h1 class="make-header font-weight-bold pb-1 pt-4">
-                    Make:
-                </h1>
-                <h2 class="make-info">
-                    {{make}}
-                </h2>
-                <h1 class="model-header font-weight-bold pb-1 pt-4">
-                    Model:
-                </h1>
-                <h2 class="model-info">
-                    {{model}}
-                </h2>
-                <h1 class="year-header font-weight-bold pb-1 pt-4">
-                    Year:
-                </h1>
-                <h2 class="year-info">
-                    {{year}}
-                </h2>
-                <h1 class="stock-header font-weight-bold">
-                    In-stock:
-                </h1>
-                <h2 class="stock-info">
-                    {{instock}}
-                </h2>
-                <h1 class="price-header font-weight-bold">
-                    Price per day:
-                </h1>
-                <h2 class="price-info">
-                    {{priceperday}}
-                </h2>
-                <h1 class="color-header font-weight-bold pb-1 pt-4">
-                    Color:
-                </h1>
+    <div id="inventory" class="container">
+        <div class="row" id="insert-template-here">
+        </div>
+    </div>
+    <div id="checkout" class="container col-sm">
+        <p id="checkoutInput"></p>
+    </div>
+    <form id="form-inputs" class="container mb-5 mt-5">
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationTooltip01">First name</label>
+                    <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark"
+                        required>
+                    <div class="valid-tooltip">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationTooltip02">Last name</label>
+                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto"
+                        required>
+                    <div class="valid-tooltip">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationTooltipUsername">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username"
+                            aria-describedby="validationTooltipUsernamePrepend" required>
+                        <div class="invalid-tooltip">
+                            Please choose a unique and valid username.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">City</label>
+                    <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                    <div class="invalid-tooltip">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationTooltip04">State</label>
+                    <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                    <div class="invalid-tooltip">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationTooltip05">Zip</label>
+                    <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                    <div class="invalid-tooltip">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+        <script id="template-inventory" type="text/x-handlebars-template">
+            <div class="col-sm-4 mt-5">
+                <div class="text-center card mb-4">
+                    <div class="card-body pb-4">
+                        <h1 class="make-header font-weight-bold pb-1 pt-4 card-title">
+                            Make:
+                        </h1>
+                        <h2 class="make-info card-text">
+                            {{make}}
+                        </h2>
+                        <h1 class="model-header font-weight-bold pb-1 pt-4 card-title">
+                            Model:
+                        </h1>
+                        <h2 class="model-info card-text">
+                            {{model}}
+                        </h2>
+                        <h1 class="year-header font-weight-bold pb-1 pt-4 card-title">
+                            Year:
+                        </h1>
+                        <h2 class="year-info card-text">
+                            {{year}}
+                        </h2>
+                        <h1 class="stock-header font-weight-bold">
+                            In-stock:
+                        </h1>
+                        <h2 class="stock-info card-text">
+                            {{instock}}
+                        </h2>
+                        <h1 class="price-header font-weight-bold card-title">
+                            Price per day:
+                        </h1>
+                        <h2 class="price-info card-text">
+                            {{priceperday}}
+                        </h2>
+                        <h1 class="color-header font-weight-bold pb-1 pt-4 card-title">
+                            Color:
+                        </h1>
 
-                <h2 class="color-info pb-3">
-                    {{color}}
-                </h2>
-                <h1 class="description-header font-weight-bold pb-1">
-                    Description:
-                </h1>
-                <h2 class="description-info pb-3">
-                    {{description}}
-                </h2>
-                <img id="car-image" class="d-flex col-sm-12 col-lg-12 pb-4" src="{{image}}">
-                <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="MustangRentBtn" name="firstRentBtn">
-                    <h3 class=font-weight-bold>Rent</h3>
-                </button>
+                        <h2 class="color-info pb-3 card-text">
+                            {{color}}
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1 card-title">
+                            Description:
+                        </h1>
+                        <h2 class="description-info pb-3 card-text">
+                            {{description}}
+                        </h2>
+                        <img id="car-image" class="d-flex col-sm-12 col-lg-12 pb-4" src="{{image}}">
+                        <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5 rentingButton" type="button" name="firstRentBtn">
+                            <h3 class=font-weight-bold>Rent</h3>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
 
 </body>
 

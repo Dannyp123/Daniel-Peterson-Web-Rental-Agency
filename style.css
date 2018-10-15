@@ -2,3 +2,9 @@
   font-family: "Chonburi";
   font-size: 18pt;
 }
+#home {
+  display: none;
+}
+#form-inputs {
+  display: none;
+}

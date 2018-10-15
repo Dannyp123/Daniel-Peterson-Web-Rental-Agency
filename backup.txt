@@ -1,0 +1,199 @@
+<div class="mt-5 col-sm">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h1 class="make-header font-weight-bold pb-1 pt-4">
+                            Make:
+                        </h1>
+                        <h2 class="make-info">
+                            Dodge
+                        </h2>
+                        <h1 class="model-header font-weight-bold pb-1 pt-4">
+                            Model:
+                        </h1>
+                        <h2 class="model-info">
+                            Challanger HellCat
+                        </h2>
+                        <h1 class="year-header font-weight-bold pb-1 pt-4">
+                            Year:
+                        </h1>
+                        <h2 class="year-info">
+                            2016
+                        </h2>
+                        <h1 class="stock-header font-weight-bold">
+                            In-stock:
+                        </h1>
+                        <h2 class="challenger-stock-info">
+                            18
+                        </h2>
+                        <h1 class="price-header font-weight-bold">
+                            Price per day:
+                        </h1>
+                        <h2 class="price-info">
+                            $563 per day
+                        </h2>
+                        <h1 class="color-header font-weight-bold pb-1 pt-4">
+                            Color:
+                        </h1>
+                        <h2 class="color-info pb-3">
+                            Orange
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+                            Description:
+                        </h1>
+                        <h2 class="description-info">
+                            {{description}}
+                        </h2>
+                        <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/dodge-challenger.jpeg">
+                        <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
+                            <h3 class=font-weight-bold>Rent</h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mt-5 col-sm">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h1 class="make-header font-weight-bold pb-1 pt-4">
+                            Make:
+                        </h1>
+                        <h2 class="make-info">
+                            Ford
+                        </h2>
+                        <h1 class="model-header font-weight-bold pb-1 pt-4">
+                            Model:
+                        </h1>
+                        <h2 class="model-info">
+                            F-150 Raptor
+                        </h2>
+                        <h1 class="year-header font-weight-bold pb-1 pt-4">
+                            Year:
+                        </h1>
+                        <h2 class="year-info">
+                            2017
+                        </h2>
+                        <h1 class="stock-header font-weight-bold">
+                            In-stock:
+                        </h1>
+                        <h2 class="raptor-stock-info">
+                            42
+                        </h2>
+                        <h1 class="price-header font-weight-bold">
+                            Price per day:
+                        </h1>
+                        <h2 class="price-info">
+                            $450 per day
+                        </h2>
+                        <h1 class="color-header font-weight-bold pb-1 pt-4">
+                            Color:
+                        </h1>
+                        <h2 class="color-info pb-3">
+                            Blue
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+                            Description:
+                        </h1>
+                        <h2 class="description-info">
+                            {{description}}
+                        </h2>
+                        <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/ford-raptor.jpeg">
+                        <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
+                            <h3 class=font-weight-bold>Rent</h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 col-sm">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h1 class="make-header font-weight-bold pb-1 pt-4">
+                            Make:
+                        </h1>
+                        <h2 class="make-info">
+                            Jeep
+                        </h2>
+                        <h1 class="model-header font-weight-bold pb-1 pt-4">
+                            Model:
+                        </h1>
+                        <h2 class="model-info">
+                            Rubicon
+                        </h2>
+                        <h1 class="year-header font-weight-bold pb-1 pt-4">
+                            Year:
+                        </h1>
+                        <h2 class="year-info">
+                            2012
+                        </h2>
+                        <h1 class="stock-header font-weight-bold">
+                            In-stock:
+                        </h1>
+                        <h2 class="rubicon-stock-info">
+                            29
+                        </h2>
+                        <h1 class="price-header font-weight-bold">
+                            Price per day:
+                        </h1>
+                        <h2 class="price-info">
+                            $189 per day
+                        </h2>
+                        <h1 class="color-header font-weight-bold pb-1 pt-4">
+                            Color:
+                        </h1>
+                        <h2 class="color-info pb-3">
+                            Black
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+                            Description:
+                        </h1>
+                        <h2 class="description-info">
+                            {{description}}
+                        </h2>
+                        <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/jeep-rubicon.jpeg">
+                        <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
+                            <h3 class=font-weight-bold>Rent</h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 col-sm">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h1 class="make-header font-weight-bold pb-1 pt-4">
+                            Make:
+                        </h1>
+                        <h2 class="make-info">
+                            BMW
+                        </h2>
+                        <h1 class="model-header font-weight-bold pb-1 pt-4">
+                            Model:
+                        </h1>
+                        <h2 class="model-info">
+                            M2
+                        </h2>
+                        <h1 class="year-header font-weight-bold pb-1 pt-4">
+                            Year:
+                        </h1>
+                        <h2 class="year-info">
+                            2016
+                        </h2>
+                        <h1 class="stock-header font-weight-bold">
+                            In-stock:
+                        </h1>
+                        <h2 class="m2-stock-info">
+                            34
+                        </h2>
+                        <h1 class="price-header font-weight-bold">
+                            Price per day:
+                        </h1>
+                        <h2 class="price-info">
+                            $524 per day
+                        </h2>
+                        <h1 class="color-header font-weight-bold pb-1 pt-4">
+                            Color:
+                        </h1>
+                        <h2 class="color-info pb-3">
+                            Metallic Blue
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+Description:

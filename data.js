@@ -32,6 +32,39 @@ const INVENTORY = {
       instock: 21,
       priceperday: 563,
       image: "images-using/dodge-challenger.jpeg"
+    },
+    {
+      make: "Ford",
+      model: "F-150 Raptor",
+      color: "Blue",
+      year: 2017,
+      description:
+        "2017 Ford Raptor, basically brand new only 28,500 miles. Has a 7.5 L V8 and can get up and go.",
+      instock: 42,
+      priceperday: 450,
+      image: "images-using/ford-raptor.jpeg"
+    },
+    {
+      make: "Jeep",
+      model: "Rubicon",
+      color: "Black",
+      year: 2012,
+      description:
+        "2012 Jeep Rubicon, comes on a 2 inch lift kit with XD SERIES® - XD836 FURY Gloss Black with Milled Accents rims and tires on it. Has a 2500 lb winch on the front for your friend who always gets stuck. Also has a bull bar to add that pop!",
+      instock: 29,
+      priceperday: 189,
+      image: "images-using/jeep-rubicon.jpeg"
+    },
+    {
+      make: "BMW",
+      model: "M2",
+      color: "Metallic Blue",
+      year: 2016,
+      description:
+        "2016 BMW M2, comes with sports addition or standard. Can get it manual or automatic. Comes with stock Kicker sterio system. Although it has a V6 in it, do not let that fool you. She can get up and run!",
+      instock: 34,
+      priceperday: 525,
+      image: "images-using/BMW-m2.jpg"
     }
   ]
 };
