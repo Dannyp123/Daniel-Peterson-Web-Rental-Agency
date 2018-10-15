@@ -12,26 +12,33 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script src="data.js" defer></script>
+    <script src="javaScript.js" defer></script>
+
 
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand text-white" href="#home">
-            <h1 class="font-weight-bold nav-bar-font"><i class="fas fa-store"></i> Rental Agency</h1>
-        </a>
+        <h1 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Rental Agency</h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item pl-5">
+                    <a class="nav-link" href="#home">
+                        <h4>Home</h4>
+                    </a>
+                </li>
+                <li class="nav-item pl-5">
                     <a class="nav-link" href="#first-item">
                         <h4 id="inventoryLink">Inventory</h4><span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item d-flex align-lg-items-end flex-column">
+                <li class="nav-item pl-5">
                     <a class="nav-link" href="#">
                         <h4><i class="fas fa-shopping-cart"></i> Cart</h4>
                     </a>
@@ -39,51 +46,12 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
+    <div id="first-item" class="container">
         <div class="row">
             <div class="mt-5 col-sm">
                 <div class="card">
-                    <div class="card-body text-center">
-                        <h1 class="make-header font-weight-bold pb-1 pt-4">
-                            Make:
-                        </h1>
-                        <h2 class="make-info">
-                            Ford
-                        </h2>
-                        <h1 class="model-header font-weight-bold pb-1 pt-4">
-                            Model:
-                        </h1>
-                        <h2 class="model-info">
-                            Mustang
-                        </h2>
-                        <h1 class="year-header font-weight-bold pb-1 pt-4">
-                            Year:
-                        </h1>
-                        <h2 class="year-info">
-                            2013
-                        </h2>
-                        <h1 class="stock-header font-weight-bold">
-                            In-stock:
-                        </h1>
-                        <h2 class="stock-info">
-                            36
-                        </h2>
-                        <h1 class="price-header font-weight-bold">
-                            Price per day:
-                        </h1>
-                        <h2 class="price-info">
-                            $250 per day
-                        </h2>
-                        <h1 class="color-header font-weight-bold pb-1 pt-4">
-                            Color:
-                        </h1>
-                        <h2 class="color-info pb-3">
-                            Red
-                        </h2>
-                        <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/ford-mustang2.jpeg">
-                        <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
-                            <h3 class=font-weight-bold>Rent</h3>
-                        </button>
+                    <div id="insert-template-here" class="card-body text-center">
+
                     </div>
                 </div>
             </div>
@@ -111,7 +79,7 @@
                         <h1 class="stock-header font-weight-bold">
                             In-stock:
                         </h1>
-                        <h2 class="stock-info">
+                        <h2 class="camero-stock-info">
                             24
                         </h2>
                         <h1 class="price-header font-weight-bold">
@@ -125,6 +93,12 @@
                         </h1>
                         <h2 class="color-info pb-3">
                             Silver/grey
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+                            Description:
+                        </h1>
+                        <h2 class="description-info">
+                            {{description}}
                         </h2>
                         <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/chevy-camero.jpg">
                         <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
@@ -157,7 +131,7 @@
                         <h1 class="stock-header font-weight-bold">
                             In-stock:
                         </h1>
-                        <h2 class="stock-info">
+                        <h2 class="challenger-stock-info">
                             18
                         </h2>
                         <h1 class="price-header font-weight-bold">
@@ -171,6 +145,12 @@
                         </h1>
                         <h2 class="color-info pb-3">
                             Orange
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+                            Description:
+                        </h1>
+                        <h2 class="description-info">
+                            {{description}}
                         </h2>
                         <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/dodge-challenger.jpeg">
                         <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
@@ -205,7 +185,7 @@
                         <h1 class="stock-header font-weight-bold">
                             In-stock:
                         </h1>
-                        <h2 class="stock-info">
+                        <h2 class="raptor-stock-info">
                             42
                         </h2>
                         <h1 class="price-header font-weight-bold">
@@ -219,6 +199,12 @@
                         </h1>
                         <h2 class="color-info pb-3">
                             Blue
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+                            Description:
+                        </h1>
+                        <h2 class="description-info">
+                            {{description}}
                         </h2>
                         <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/ford-raptor.jpeg">
                         <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
@@ -251,7 +237,7 @@
                         <h1 class="stock-header font-weight-bold">
                             In-stock:
                         </h1>
-                        <h2 class="stock-info">
+                        <h2 class="rubicon-stock-info">
                             29
                         </h2>
                         <h1 class="price-header font-weight-bold">
@@ -265,6 +251,12 @@
                         </h1>
                         <h2 class="color-info pb-3">
                             Black
+                        </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+                            Description:
+                        </h1>
+                        <h2 class="description-info">
+                            {{description}}
                         </h2>
                         <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/jeep-rubicon.jpeg">
                         <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
@@ -297,7 +289,7 @@
                         <h1 class="stock-header font-weight-bold">
                             In-stock:
                         </h1>
-                        <h2 class="stock-info">
+                        <h2 class="m2-stock-info">
                             34
                         </h2>
                         <h1 class="price-header font-weight-bold">
@@ -312,6 +304,12 @@
                         <h2 class="color-info pb-3">
                             Metallic Blue
                         </h2>
+                        <h1 class="description-header font-weight-bold pb-1">
+                            Description:
+                        </h1>
+                        <h2 class="description-info">
+                            {{description}}
+                        </h2>
                         <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/BMW-m2.jpg">
                         <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="firstRentBtn" name="firstRentBtn">
                             <h3 class=font-weight-bold>Rent</h3>
@@ -321,8 +319,56 @@
             </div>
         </div>
     </div>
-    <script src="javaScript.js"></script>
-    <script src="data.js"></script>
+    <script id="template-inventory" type="text/x-handlebars-template">
+        <h1 class="make-header font-weight-bold pb-1 pt-4">
+            Make:
+        </h1>
+        <h2 class="make-info">
+            {{make}}
+        </h2>
+        <h1 class="model-header font-weight-bold pb-1 pt-4">
+            Model:
+        </h1>
+        <h2 class="model-info">
+            {{model}}
+        </h2>
+        <h1 class="year-header font-weight-bold pb-1 pt-4">
+            Year:
+        </h1>
+        <h2 class="year-info">
+            {{year}}
+        </h2>
+        <h1 class="stock-header font-weight-bold">
+            In-stock:
+        </h1>
+        <h2 class="stock-info">
+            {{instock}}
+        </h2>
+        <h1 class="price-header font-weight-bold">
+            Price per day:
+        </h1>
+        <h2 class="price-info">
+            {{priceperday}}
+        </h2>
+        <h1 class="color-header font-weight-bold pb-1 pt-4">
+            Color:
+        </h1>
+
+        <h2 class="color-info pb-3">
+            {{color}}
+        </h2>
+        <h1 class="description-header font-weight-bold pb-1">
+            Description:
+        </h1>
+        <h2 class="description-info">
+            {{description}}
+        </h2>
+        <img id="fordMustang" class="d-flex col-sm-12 col-lg-12 pb-4" src="images-using/ford-mustang2.jpeg">
+        <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5" type="button" id="MustangRentBtn" name="firstRentBtn">
+            <h3 class=font-weight-bold>Rent</h3>
+        </button>
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
