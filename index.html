@@ -30,97 +30,105 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex">
                 <li class="nav-item pl-5">
-                    <a id="home-link" class="nav-link" href="#home">
-                        <h4>Home</h4>
-                    </a>
-                </li>
-                <li class="nav-item pl-5">
                     <a class="nav-link" href="#inventory">
                         <h4 id="inventoryLink">Inventory</h4><span class="sr-only">(current)</span>
+
                     </a>
                 </li>
                 <li class="nav-item pl-5">
-                    <a id="cart-link" class="nav-link" href="#form-inputs">
+                    <a id="cart-link" class="nav-link" href="#cart">
                         <h4><i class="fas fa-shopping-cart"></i> Cart</h4>
+                    </a>
+                </li>
+                <li class="nav-item pl-5">
+                    <a id="checkout-link" class="nav-link" href="#check-out">
+                        <h4>Check Out</h4>
+
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div id="home" class="container col-sm text-center mt-5">
-        <div class="card">
-            <h1 class="font-weight-bold">Rental Car Agency</h1>
-            <p>This is a store that you can "rent" cars from</p>
+    <div id="cart" class="container col-sm-4 text-center mt-5">
+        <div class="card container">
+            <div id="cart-items">
+                <h3 class="pt-3"><i class="fas fa-shopping-cart pr-1"></i>Shopping Cart:</h3>
+                <h3 class="shoppingCartNum">0</h3>
+            </div>
         </div>
     </div>
     <div id="inventory" class="container">
         <div class="row" id="insert-template-here">
         </div>
     </div>
-    <div id="checkout" class="container col-sm">
-        <p id="checkoutInput"></p>
+    <div id="check-out" class="card m-5">
+        <div class="card-body">
+            <form class="container mb-5 mt-5">
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip01">First name</label>
+                            <input type="text" class="form-control" id="validationTooltip01" placeholder="First name"
+                                value="Mark" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip02">Last name</label>
+                            <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name"
+                                value="Otto" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltipUsername">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                </div>
+                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username"
+                                    aria-describedby="validationTooltipUsernamePrepend" required>
+                                <div class="invalid-tooltip">
+                                    Please choose a unique and valid username.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationTooltip03">City</label>
+                            <input type="text" class="form-control" id="validationTooltip03" placeholder="City"
+                                required>
+                            <div class="invalid-tooltip">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationTooltip04">State</label>
+                            <input type="text" class="form-control" id="validationTooltip04" placeholder="State"
+                                required>
+                            <div class="invalid-tooltip">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationTooltip05">Zip</label>
+                            <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                            <div class="invalid-tooltip">
+                                Please provide a valid zip.
+                            </div>
+                        </div>
+                    </div>
+                    <button id="checkOutButton" class="btn btn-primary" type="submit" disabled>Order</button>
+                </form>
+            </form>
+        </div>
     </div>
-    <form id="form-inputs" class="container mb-5 mt-5">
-        <form class="needs-validation" novalidate>
-            <div class="form-row">
-                <div class="col-md-4 mb-3">
-                    <label for="validationTooltip01">First name</label>
-                    <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark"
-                        required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationTooltip02">Last name</label>
-                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto"
-                        required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationTooltipUsername">Username</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                        </div>
-                        <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username"
-                            aria-describedby="validationTooltipUsernamePrepend" required>
-                        <div class="invalid-tooltip">
-                            Please choose a unique and valid username.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="validationTooltip03">City</label>
-                    <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid city.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationTooltip04">State</label>
-                    <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid state.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationTooltip05">Zip</label>
-                    <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
-                    <div class="invalid-tooltip">
-                        Please provide a valid zip.
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-primary" type="submit">Submit form</button>
-        </form>
-        <script id="template-inventory" type="text/x-handlebars-template">
+    <script id="template-inventory" type="text/x-handlebars-template">
             <div class="col-sm-4 mt-5">
-                <div class="text-center card mb-4">
+                <div class="itemCard entry text-center card mb-4">
                     <div class="card-body pb-4">
                         <h1 class="make-header font-weight-bold pb-1 pt-4 card-title">
                             Make:
@@ -143,7 +151,7 @@
                         <h1 class="stock-header font-weight-bold">
                             In-stock:
                         </h1>
-                        <h2 class="stock-info card-text">
+                        <h2 class="cardStock card-text">
                             {{instock}}
                         </h2>
                         <h1 class="price-header font-weight-bold card-title">
@@ -167,7 +175,7 @@
                         </h2>
                         <img id="car-image" class="d-flex col-sm-12 col-lg-12 pb-4" src="{{image}}">
                         <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5 rentingButton" type="button" name="firstRentBtn">
-                            <h3 class=font-weight-bold>Rent</h3>
+                            <h3 class=font-weight-bold>Add to cart</h3>
                         </button>
                     </div>
                 </div>
@@ -175,12 +183,12 @@
         </div>
     </script>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
 </body>
 
