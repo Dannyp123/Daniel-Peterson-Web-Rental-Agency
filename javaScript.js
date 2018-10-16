@@ -42,33 +42,23 @@ function removeStock(cardIndex) {
 
 function clickingRentButton() {
   var cards = document.querySelectorAll(".itemCard");
-  cards.forEach(function(button, index) {
+  var buttons = document.querySelectorAll(".rentingButton");
+  buttons.forEach(function(button, index) {
     button.addEventListener("click", function() {
       if (cards[index].querySelector(".cardStock").innerText > 0) {
         removeStock(index);
+        addingToCart();
       }
     });
   });
 }
 
 function addingToCart() {
-  var inCart = document.querySelector(".shoppingCartNum");
-  inCart.innerText = Number(inCart.innerText) + 1;
-}
-
-function placingTheOrder() {
-  var cartNum = Number(document.querySelector(".shoppingCartNum").innerText);
-  if (cartNum > 0) {
-    document.querySelector("#checkOutButton").disabled = false;
-  } else {
-    document.querySelector("#checkOutButton").disabled = true;
-  }
+  var Cart = document.querySelector(".shoppingCartNum");
+  Cart.innerText = Number(Cart.innerText) + 1;
 }
 
 settingUpInventory();
 workingCart();
 workingForms();
 clickingRentButton();
-removeStock();
-placingTheOrder();
-addingToCart();

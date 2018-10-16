@@ -29,12 +29,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex">
-                <li class="nav-item pl-5">
+                <!-- <li class="nav-item pl-5">
                     <a class="nav-link" href="#inventory">
                         <h4 id="inventoryLink">Inventory</h4><span class="sr-only">(current)</span>
 
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item pl-5">
                     <a id="cart-link" class="nav-link" href="#cart">
                         <h4><i class="fas fa-shopping-cart"></i> Cart</h4>
@@ -58,7 +58,7 @@
         </div>
     </div>
     <div id="inventory" class="container">
-        <div class="row" id="insert-template-here">
+        <div id="insert-template-here">
         </div>
     </div>
     <div id="check-out" class="card m-5">
@@ -67,16 +67,14 @@
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label for="validationServer01">First name</label>
-                        <input type="text" class="form-control" id="validationServer01" placeholder="First name"
-                            required>
+                        <input type="text" class="form-control" placeholder="First Name" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="validationServer02">Last name</label>
-                        <input type="text" class="form-control" id="validationServer02" placeholder="Last name"
-                            required>
+                        <input type="text" class="form-control" placeholder="Last Name" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -122,7 +120,7 @@
                     <label class="radio-inline"><input type="radio" name="optradio"> Cash</label>
                 </div>
                 <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" maxlength="10" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         required>
                     <div class="invalid-feedback">
                         Please provide a valid phone number
@@ -135,57 +133,58 @@
         </div>
     </div>
     <script id="template-inventory" type="text/x-handlebars-template">
-            <div class="col-sm-4 mt-5">
-                <div class="itemCard entry text-center card mb-4">
-                    <div class="card-body pb-4">
-                        <h1 class="make-header font-weight-bold pb-1 pt-4 card-title">
-                            Make:
-                        </h1>
-                        <h2 class="make-info card-text">
-                            {{make}}
-                        </h2>
-                        <h1 class="model-header font-weight-bold pb-1 pt-4 card-title">
-                            Model:
-                        </h1>
-                        <h2 class="model-info card-text">
-                            {{model}}
-                        </h2>
-                        <h1 class="year-header font-weight-bold pb-1 pt-4 card-title">
-                            Year:
-                        </h1>
-                        <h2 class="year-info card-text">
-                            {{year}}
-                        </h2>
-                        <h1 class="stock-header font-weight-bold">
-                            In-stock:
-                        </h1>
-                        <h2 class="cardStock card-text">
-                            {{instock}}
-                        </h2>
-                        <h1 class="price-header font-weight-bold card-title">
-                            Price per day:
-                        </h1>
-                        <h2 class="price-info card-text">
-                            {{priceperday}}
-                        </h2>
-                        <h1 class="color-header font-weight-bold pb-1 pt-4 card-title">
-                            Color:
-                        </h1>
+        <div class="itemCard card">
+            <div class="card-body">
+                <div class="col-sm-6 pb-5">
+                    <img id="car-image" class="pb-5 pt-3 col-sm" src="{{image}}">
+                    <button class="btn btn-primary mleft-4 pt-3 pb-3 pl-5 pr-5 rentingButton text-center" type="button" name="firstRentBtn">
+                        <h3 class=font-weight-bold>Add to cart</h3>
+                    </button>
+                </div>
+                <div class="template-body col-sm-6">
+                    <h1 class="make-header font-weight-bold">
+                        Make:
+                    </h1>
+                    <h2 class="make-info">
+                        {{make}}
+                    </h2>
+                    <h1 class="model-header font-weight-bold">
+                        Model:
+                    </h1>
+                    <h2 class="model-info">
+                        {{model}}
+                    </h2>
+                    <h1 class="year-header font-weight-bold">
+                        Year:
+                    </h1>
+                    <h2 class="year-info">
+                        {{year}}
+                    </h2>
+                    <h1 class="stock-header font-weight-bold">
+                        In-stock:
+                    </h1>
+                    <h2 class="cardStock">
+                        {{instock}}
+                    </h2>
+                    <h1 class="price-header font-weight-bold">
+                        Price per day:
+                    </h1>
+                    <h2 class="price-info">
+                        {{priceperday}}
+                    </h2>
+                    <h1 class="color-header font-weight-bold">
+                        Color:
+                    </h1>
 
-                        <h2 class="color-info pb-3 card-text">
-                            {{color}}
-                        </h2>
-                        <h1 class="description-header font-weight-bold pb-1 card-title">
-                            Description:
-                        </h1>
-                        <h2 class="description-info pb-3 card-text">
-                            {{description}}
-                        </h2>
-                        <img id="car-image" class="d-flex col-sm-12 col-lg-12 pb-4" src="{{image}}">
-                        <button class="btn btn-primary pt-3 pb-3 pl-5 pr-5 rentingButton" type="button" name="firstRentBtn">
-                            <h3 class=font-weight-bold>Add to cart</h3>
-                        </button>
-                    </div>
+                    <h2 class="color-info">
+                        {{color}}
+                    </h2>
+                    <h1 class="description-header font-weight-bold">
+                        Description:
+                    </h1>
+                    <h2 class="description-info text-center">
+                        {{description}}
+                    </h2>
                 </div>
             </div>
         </div>
