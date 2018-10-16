@@ -9,6 +9,19 @@
   display: none;
 }
 
-/* .itemCard {
+.card-body {
   display: grid;
-} */
+}
+
+#car-image {
+  width: 250px;
+}
+
+@media screen and (min-width: 800px) {
+  .card-body {
+    grid-template-columns: 1fr 1fr;
+  }
+  #car-image {
+    width: 500px;
+  }
+}
