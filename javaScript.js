@@ -1,8 +1,11 @@
 function settingUpInventory() {
   var inventoryItems = document.querySelector("#template-inventory").innerHTML;
   var template = Handlebars.compile(inventoryItems);
-  for (vehicle of INVENTORY.vehicles) {
+  // for (vehicle of INVENTORY.vehicles) {
+  for (index in INVENTORY.vehicles) {
+    let vehicle = INVENTORY.vehicles[index];
     var html = template({
+      index: index,
       make: `${vehicle.make}`,
       model: `${vehicle.model}`,
       year: `${vehicle.year}`,
@@ -40,17 +43,17 @@ function removeStock(cardIndex) {
     cards[cardIndex].querySelector(".cardStock").innerHTML - 1;
 }
 
-function clickingRentButton() {
+function rentItem(index) {
   var cards = document.querySelectorAll(".itemCard");
-  var buttons = document.querySelectorAll(".rentingButton");
-  buttons.forEach(function(button, index) {
-    button.addEventListener("click", function() {
-      if (cards[index].querySelector(".cardStock").innerText > 0) {
-        removeStock(index);
-        addingToCart();
-      }
-    });
-  });
+  var item = INVENTORY.vehicles[index];
+  var totalArea = document.querySelector(".totalCartNum");
+  if (cards[index].querySelector(".cardStock").innerText > 0) {
+    totalArea.innerHTML = item.priceperday + Number(totalArea.innerHTML);
+    removeStock(index);
+    addingToCart();
+  } else if (cards[index].querySelector(".cardStock").innerHTML === 0) {
+    soldOut();
+  }
 }
 
 function addingToCart() {
@@ -58,7 +61,10 @@ function addingToCart() {
   Cart.innerText = Number(Cart.innerText) + 1;
 }
 
+function soldOut() {
+  const quanity = document.querySelector(".template-body");
+  quanity.style.display = "none";
+}
 settingUpInventory();
 workingCart();
 workingForms();
-clickingRentButton();
