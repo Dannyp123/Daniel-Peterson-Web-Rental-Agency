@@ -47,7 +47,11 @@ body {
     margin-right: 12px;
   }
   #car-image {
-    width: 225px;
+    width: 250px;
+  }
+
+  #rentingButton {
+    margin-left: 16px;
   }
   html {
     font-size: 12px;
