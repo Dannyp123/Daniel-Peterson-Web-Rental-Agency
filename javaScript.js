@@ -64,6 +64,9 @@ function rentItem(index) {
     addingToCart();
   } else if (cards[index].querySelector(".cardStock").innerHTML === "0") {
     cards[index].querySelector("#rentingButton").innerText = "Sold Out";
+    cards[index]
+      .querySelector("#rentingButton")
+      .classList.replace("btn-primary", "btn-danger");
   }
 }
 
