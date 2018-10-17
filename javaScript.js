@@ -51,8 +51,8 @@ function rentItem(index) {
     totalArea.innerHTML = item.priceperday + Number(totalArea.innerHTML);
     removeStock(index);
     addingToCart();
-  } else if (cards[index].querySelector(".cardStock").innerHTML === 0) {
-    soldOut();
+  } else if (cards[index].querySelector(".cardStock").innerHTML === "0") {
+    cards[index].querySelector("#rentingButton").innerText = "Sold Out";
   }
 }
 
@@ -61,10 +61,14 @@ function addingToCart() {
   Cart.innerText = Number(Cart.innerText) + 1;
 }
 
-function soldOut() {
-  const quanity = document.querySelector(".template-body");
-  quanity.style.display = "none";
+function unDisablingOrderButton() {
+  const button = document.querySelector("#orderButton");
+  var num = document.querySelector(".shoppingCartNum");
+  if (num === "0") {
+    button.disabled = "true";
+  }
 }
+
 settingUpInventory();
 workingCart();
 workingForms();
