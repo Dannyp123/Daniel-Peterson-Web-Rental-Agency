@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(110, 110, 110);
+}
+
 .nav-bar-font {
   font-family: "Chonburi";
   font-size: 18pt;
@@ -14,7 +18,15 @@
 }
 
 #car-image {
-  width: 250px;
+  width: 260px;
+}
+
+/* #check-out {
+  border: none;
+} */
+
+.template-body {
+  display: block;
 }
 
 @media screen and (min-width: 800px) {
