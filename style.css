@@ -21,19 +21,31 @@ body {
   width: 260px;
 }
 
-/* #check-out {
-  border: none;
-} */
-
 .template-body {
   display: block;
 }
-
-@media screen and (min-width: 800px) {
+/* FOR LAPTOPS AND TABLETS */
+@media screen and (min-width: 1000px) {
   .card-body {
     grid-template-columns: 1fr 1fr;
+    margin: 20px;
   }
   #car-image {
     width: 500px;
+  }
+}
+
+/* FOR SMALL TABLETS AND PHONES */
+@media screen and (max-width: 375px) {
+  .card-body {
+    grid-template-columns: 1fr;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  #car-image {
+    width: 200px;
+  }
+  html {
+    font-size: 12px;
   }
 }

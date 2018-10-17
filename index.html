@@ -42,90 +42,93 @@
             </ul>
         </div>
     </nav>
-    <div id="cart" class="container text-center mt-5">
-        <div class="card container">
-            <div id="cart-items">
-                <h3 class="pt-3"><i class="fas fa-shopping-cart pr-1"></i>Shopping Cart:</h3>
-                <h3 class="shoppingCartNum">0</h3>
-                <h3 class="pt-3"><i class="fas fa-dollar-sign"></i> Total:</h3>
-                <h3 class="totalCartNum"></h3>
+    <div class="container">
+        <div id="cart" class="text-center pb-4 pt-5 container">
+            <div class="card">
+                <div id="cart-items">
+                    <h3 class="pt-3"><i class="fas fa-shopping-cart pr-1"></i>Shopping Cart:</h3>
+                    <h3 class="shoppingCartNum">0</h3>
+                    <h3 class="pt-3"><i class="fas fa-dollar-sign"></i> Total:</h3>
+                    <h3 class="totalCartNum"></h3>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="inventory" class="container">
-        <div id="insert-template-here">
+        <div id="inventory" class="container">
+            <div id="insert-template-here">
+            </div>
         </div>
-    </div>
-    <div id="check-out" class="card m-5">
-        <div class="card-body">
-            <form class="container mb-5 mt-5">
-                <div class="form-row">
-                    <div class="col-md-4 mb-3">
-                        <label for="validationServer01">First name</label>
-                        <input type="text" class="form-control" placeholder="First Name" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationServer02">Last name</label>
-                        <input type="text" class="form-control" placeholder="Last Name" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="validationServerUsername">Email</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+        <div id="check-out" class="card m-5">
+            <div class="card-body">
+                <form class="container mb-5 mt-5">
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationServer01">First name</label>
+                            <input type="text" class="form-control" placeholder="First Name" required>
+                            <div class="valid-feedback">
+                                Looks good!
                             </div>
-                            <input type="email" class="form-control" id="validationServerUsername" placeholder="Email"
-                                aria-describedby="inputGroupPrepend3" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationServer02">Last name</label>
+                            <input type="text" class="form-control" placeholder="Last Name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationServerUsername">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                </div>
+                                <input type="email" class="form-control" id="validationServerUsername" placeholder="Email"
+                                    aria-describedby="inputGroupPrepend3" required>
+                                <div class="invalid-feedback">
+                                    Please choose a Email.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationServer03">City</label>
+                            <input type="text" class="form-control" id="validationServer03" placeholder="City" required>
                             <div class="invalid-feedback">
-                                Please choose a Email.
+                                Please provide a valid city.
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="validationServer03">City</label>
-                        <input type="text" class="form-control" id="validationServer03" placeholder="City" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid city.
+                        <div class="col-md-3 mb-3">
+                            <label for="validationServer04">State</label>
+                            <input type="text" class="form-control" id="validationServer04" placeholder="State"
+                                required>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationServer04">State</label>
-                        <input type="text" class="form-control" id="validationServer04" placeholder="State" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid state.
+                        <div class="col-md-3 mb-3">
+                            <label for="validationServer05">Zip</label>
+                            <input type="text" class="form-control" maxlength="5" id="validationServer05" placeholder="Zip"
+                                required>
+                            <div class="invalid-feedback">
+                                Please provide a valid zip.
+                            </div>
                         </div>
+                        <label class="radio-inline"><input type="radio" name="optradio" checked> Card</label>
+                        <label class="radio-inline"><input type="radio" name="optradio"> Check</label>
+                        <label class="radio-inline"><input type="radio" name="optradio"> Cash</label>
                     </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationServer05">Zip</label>
-                        <input type="text" class="form-control" maxlength="5" id="validationServer05" placeholder="Zip"
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="123 456 7890" maxlength="12" pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
                             required>
                         <div class="invalid-feedback">
-                            Please provide a valid zip.
+                            Please provide a valid phone number
                         </div>
-                    </div>
-                    <label class="radio-inline"><input type="radio" name="optradio" checked> Card</label>
-                    <label class="radio-inline"><input type="radio" name="optradio"> Check</label>
-                    <label class="radio-inline"><input type="radio" name="optradio"> Cash</label>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" maxlength="12" pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
-                        required>
-                    <div class="invalid-feedback">
-                        Please provide a valid phone number
-                    </div>
 
 
-                </div>
-                <button id="orderButton" class="btn btn-primary" type="submit" onclick="unDisablingOrderButton()">Order</button>
-            </form>
+                    </div>
+                    <button id="orderButton" class="btn btn-primary" type="submit" onclick="unDisablingOrderButton()">Order</button>
+                </form>
+            </div>
         </div>
     </div>
     <script id="template-inventory" type="text/x-handlebars-template">
@@ -133,7 +136,7 @@
             <div class="card-body">
                 <div class="pb-5">
                     <img id="car-image" class="pb-5 pt-3" src="{{image}}">
-                    <button class="btn btn-primary py-3 px-5 text-center" type="button" name="firstRentBtn" onclick="rentItem({{index}})">
+                    <button class="btn btn-primary py-3 px-5 text-center rentButton" type="button" name="firstRentBtn" onclick="rentItem({{index}})">
                         <h3 id="rentingButton"  class=font-weight-bold><i class="fas fa-cart-plus"></i> Add to cart</h3>
                     </button>
                 </div>
