@@ -30,6 +30,17 @@ function workingCart() {
 }
 
 function workingForms() {
+  const formLink = document.querySelector("#checkout-link");
+  var header = document.querySelector("#shoppingCartNum");
+  if (header.innerText > 0) {
+    formLink.style.display = "block";
+  } else {
+    formLink.style.display = "none";
+  }
+}
+document.body.addEventListener("click", workingForms);
+
+function workingCartForms() {
   const form = document.querySelector("#check-out");
   const formLink = document.querySelector("#checkout-link");
   formLink.addEventListener("click", function() {
@@ -57,18 +68,10 @@ function rentItem(index) {
 }
 
 function addingToCart() {
-  var Cart = document.querySelector(".shoppingCartNum");
+  var Cart = document.querySelector("#shoppingCartNum");
   Cart.innerText = Number(Cart.innerText) + 1;
-}
-
-function unDisablingOrderButton() {
-  const button = document.querySelector("#orderButton");
-  var num = document.querySelector(".shoppingCartNum");
-  if (num === "0") {
-    button.disabled = "true";
-  }
 }
 
 settingUpInventory();
 workingCart();
-workingForms();
+workingCartForms();

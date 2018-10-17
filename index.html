@@ -34,8 +34,8 @@
                         <h3 class="text-white"><i class="fas fa-shopping-cart"></i> Cart</h3>
                     </a>
                 </li>
-                <li class="nav-item pl-5">
-                    <a id="checkout-link" class="nav-link" href="#check-out">
+                <li id="checkout-link" class="nav-item pl-5">
+                    <a class="nav-link" href="#check-out">
                         <h3 class="text-white"><i class="fas fa-credit-card"></i> Check Out</h3>
                     </a>
                 </li>
@@ -47,7 +47,7 @@
             <div class="card">
                 <div id="cart-items">
                     <h3 class="pt-3"><i class="fas fa-shopping-cart pr-1"></i>Shopping Cart:</h3>
-                    <h3 class="shoppingCartNum">0</h3>
+                    <h3 id="shoppingCartNum">0</h3>
                     <h3 class="pt-3"><i class="fas fa-dollar-sign"></i> Total:</h3>
                     <h3 class="totalCartNum"></h3>
                 </div>
@@ -59,7 +59,7 @@
         </div>
         <div id="check-out" class="card m-5">
             <div class="card-body">
-                <form class="container mb-5 mt-5">
+                <form class="mb-5 mt-5">
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationServer01">First name</label>
@@ -126,7 +126,7 @@
 
 
                     </div>
-                    <button id="orderButton" class="btn btn-primary" type="submit" onclick="unDisablingOrderButton()">Order</button>
+                    <button id="orderButton" class="btn btn-primary" type="submit">Order</button>
                 </form>
             </div>
         </div>

@@ -6,6 +6,9 @@ body {
   font-family: "Chonburi";
   font-size: 18pt;
 }
+#checkout-link {
+  display: none;
+}
 #cart {
   display: none;
 }
