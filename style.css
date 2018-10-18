@@ -15,6 +15,7 @@ body {
 
 #check-out {
   display: none;
+  padding-top: 38px;
 }
 
 .card-body {

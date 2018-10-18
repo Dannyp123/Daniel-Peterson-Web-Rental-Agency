@@ -21,14 +21,6 @@ function settingUpInventory() {
   }
 }
 
-// function workingCart() {
-//   const cart = document.querySelector("#cart");
-//   const cartLink = document.querySelector("#cart-link");
-//   cartLink.addEventListener("click", function() {
-//     cart.style.display = "block";
-//   });
-// }
-
 function workingForms() {
   const formLink = document.querySelector("#checkout-link");
   var header = document.querySelector("#shoppingCartNum");
@@ -39,14 +31,6 @@ function workingForms() {
   }
 }
 document.body.addEventListener("click", workingForms);
-
-function workingCartForms() {
-  const form = document.querySelector("#check-out");
-  const formLink = document.querySelector("#checkout-link");
-  formLink.addEventListener("click", function() {
-    form.style.display = "block";
-  });
-}
 
 function removeStock(cardIndex) {
   var cards = document.querySelectorAll(".itemCard");
@@ -76,5 +60,3 @@ function addingToCart() {
 }
 
 settingUpInventory();
-// workingCart();
-workingCartForms();
