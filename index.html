@@ -21,9 +21,10 @@
 </head>
 
 <body>
-    <nav id="top-nav" class="nav position-sticky navbar fixed-top navbar-expand-lg navbar-light bg-primary p-2">
+    <nav id="top-nav" class="nav position-sticky navbar fixed-top navbar-expand-lg navbar-light bg-primary p-2 d-flex">
         <h1 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Danny's Rent-a-Ride</h1>
-        <button type="button" class="btn ml-5 cart-button" data-toggle="modal" data-target="#cart"><span id="cartButton"></span>
+        <button type="button" class="btn ml-5 cart-button justify-content-end nav-item" data-toggle="modal" data-target="#cart"><span
+                id="cartButton"></span>
             <i class="fas fa-shopping-cart"></i>
         </button>
     </nav>
@@ -38,7 +39,7 @@
                         <h3 class="pt-3"><i class="fas fa-shopping-cart pr-1"></i>Items:</h3>
                         <h3 id="shoppingCartNum">0</h3>
                         <h3 class="pt-3"><i class="fas fa-dollar-sign"></i> Total:</h3>
-                        <h3 class="totalCartNum"></h3>
+                        <h3 class="totalCartNum">0</h3>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -61,14 +62,16 @@
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label for="validationServer01">First name</label>
-                                <input type="text" class="form-control" placeholder="First Name" required>
+                                <input type="text" class="form-control" placeholder="First Name" pattern="[A-Za-z]+"
+                                    required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="validationServer02">Last name</label>
-                                <input type="text" class="form-control" placeholder="Last Name" required>
+                                <input type="text" class="form-control" pattern="[A-Za-z]+" placeholder="Last Name"
+                                    required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -98,36 +101,85 @@
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationServer04">State</label>
-                                <input type="text" class="form-control" id="validationServer04" placeholder="State"
-                                    required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid state.
-                                </div>
+                                <select class="text-muted form-control" placeholder="State" required>
+                                    <option disabled selected>State</option>
+                                    <option>AL</option>
+                                    <option>AK</option>
+                                    <option>AZ</option>
+                                    <option>AR</option>
+                                    <option>CA</option>
+                                    <option>CO</option>
+                                    <option>CT</option>
+                                    <option>DE</option>
+                                    <option>FL</option>
+                                    <option>GA</option>
+                                    <option>HI</option>
+                                    <option>ID</option>
+                                    <option>IL</option>
+                                    <option>IN</option>
+                                    <option>IA</option>
+                                    <option>KS</option>
+                                    <option>KY</option>
+                                    <option>LA</option>
+                                    <option>ME</option>
+                                    <option>MD</option>
+                                    <option>MA</option>
+                                    <option>MI</option>
+                                    <option>MN</option>
+                                    <option>MS</option>
+                                    <option>MO</option>
+                                    <option>MT</option>
+                                    <option>NE</option>
+                                    <option>NE</option>
+                                    <option>NV</option>
+                                    <option>NH</option>
+                                    <option>NJ</option>
+                                    <option>NM</option>
+                                    <option>NY</option>
+                                    <option>NC</option>
+                                    <option>ND</option>
+                                    <option>OH</option>
+                                    <option>OK</option>
+                                    <option>OR</option>
+                                    <option>PA</option>
+                                    <option>RI</option>
+                                    <option>SC</option>
+                                    <option>SD</option>
+                                    <option>TN</option>
+                                    <option>TX</option>
+                                    <option>UT</option>
+                                    <option>VT</option>
+                                    <option>VA</option>
+                                    <option>WA</option>
+                                    <option>WV</option>
+                                    <option>WI</option>
+                                    <option>WY</option>
+                                </select>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationServer05">Zip</label>
-                                <input type="text" class="form-control" maxlength="5" id="validationServer05"
-                                    placeholder="Zip" required>
+                                <input type="text" class="form-control" maxlength="5" pattern="[0-9]{5}" id="validationServer05"
+                                    placeholder="12345" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
-                            <div class="click-buttons">
-                                <input type="radio" id="cash" class="user" name="payment" value="Cash" checked>
-                                <label for="cash">Cash</label>
-                                <input type="radio" id="check" class="user" name="payment" value="Check">
-                                <label for="check">Check</label>
-                                <input type="radio" id="card" class="user" name="payment" value="Card">
-                                <label for="card">Card</label><br>
-                            </div>
-
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="1234567890" maxlength="12" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                                required>
+                            <label for="validationServer06">Phone number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="1234567890"
+                                maxlength="12" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
                             <div class="invalid-feedback">
                                 Please provide a valid phone number
                             </div>
+                        </div>
+                        <div class="click-buttons">
+                            <input type="radio" id="cash" class="user" name="payment" value="Cash" checked>
+                            <label for="cash">Cash</label>
+                            <input type="radio" id="check" class="user" name="payment" value="Check">
+                            <label for="check">Check</label>
+                            <input type="radio" id="card" class="user" name="payment" value="Card">
+                            <label for="card">Card</label>
                         </div>
                         <button id="orderButton" class="btn btn-primary" type="submit">Order</button>
                     </form>

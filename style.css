@@ -6,20 +6,10 @@ body {
   font-family: "Chonburi";
   font-size: 18pt;
 }
-#checkout-link {
-  display: none;
-}
-#cart {
-  display: none;
-}
-
-#check-out {
-  display: none;
-  padding-top: 38px;
-}
 
 .cart-button {
   font-size: 18px;
+  display: block;
 }
 .card-body {
   display: grid;
@@ -44,18 +34,18 @@ body {
 }
 
 /* FOR SMALL TABLETS AND PHONES */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 350px) {
   .card-body {
     grid-template-columns: 1fr;
     margin-left: 12px;
     margin-right: 12px;
   }
   #car-image {
-    width: 250px;
+    width: 200px;
   }
 
   #rentingButton {
-    margin-left: 16px;
+    /* margin-left: 10px; */
   }
   html {
     font-size: 12px;
