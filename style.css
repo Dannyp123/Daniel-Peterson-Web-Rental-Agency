@@ -18,6 +18,9 @@ body {
   padding-top: 38px;
 }
 
+.cart-button {
+  font-size: 18px;
+}
 .card-body {
   display: grid;
 }

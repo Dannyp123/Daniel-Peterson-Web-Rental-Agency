@@ -46,6 +46,7 @@ function rentItem(index) {
     totalArea.innerHTML = item.priceperday + Number(totalArea.innerHTML);
     removeStock(index);
     addingToCart();
+    showingCart();
   } else if (cards[index].querySelector(".cardStock").innerHTML === "0") {
     cards[index].querySelector("#rentingButton").innerText = "Sold Out";
     cards[index]
@@ -56,6 +57,11 @@ function rentItem(index) {
 
 function addingToCart() {
   var Cart = document.querySelector("#shoppingCartNum");
+  Cart.innerText = Number(Cart.innerText) + 1;
+}
+
+function showingCart() {
+  var Cart = document.querySelector("#cartButton");
   Cart.innerText = Number(Cart.innerText) + 1;
 }
 

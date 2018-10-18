@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Car Rental Agency</title>
-    <link rel="shortcut icon" href="images-using/ford-fusionsport.jpg" type="image/x-icon">
+    <title>Danny's Rent-a-Ride</title>
+    <link rel="shortcut icon" href="images-using/top-logo.jpeg" type="shortcut icon">
     <link href='https://fonts.googleapis.com/css?family=Chonburi' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
@@ -22,20 +22,9 @@
 
 <body>
     <nav id="top-nav" class="nav position-sticky navbar fixed-top navbar-expand-lg navbar-light bg-primary p-2">
-        <h1 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Rental Agency</h1>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav d-flex">
-                <li id="checkout-link" class="nav-item pl-5">
-                    <button type="button" class="btn nav-link btn-success text-white" data-toggle="modal" data-target="#check-out">Checkout
-                    </button>
-                </li>
-            </ul>
-        </div>
-        <button type="button" class="btn nav-link" data-toggle="modal" data-target="#cart">Cart
+        <h1 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Danny's Rent-a-Ride</h1>
+        <button type="button" class="btn ml-5 cart-button" data-toggle="modal" data-target="#cart"><span id="cartButton"></span>
+            <i class="fas fa-shopping-cart"></i>
         </button>
     </nav>
     <div id="cart" class="modal fade" tabindex="-1" role="dialog">
@@ -53,6 +42,9 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <button id="checkout-link" type="button" class="btn nav-link btn-success text-white" data-toggle="modal"
+                        data-target="#check-out" data-dismiss="modal">Checkout
+                    </button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Shopping</button>
                 </div>
             </div>
@@ -120,9 +112,15 @@
                                     Please provide a valid zip.
                                 </div>
                             </div>
-                            <label class="radio-inline"><input type="radio" name="optradio" checked> Card</label>
-                            <label class="radio-inline"><input type="radio" name="optradio"> Check</label>
-                            <label class="radio-inline"><input type="radio" name="optradio"> Cash</label>
+                            <div class="click-buttons">
+                                <input type="radio" id="cash" class="user" name="payment" value="Cash" checked>
+                                <label for="cash">Cash</label>
+                                <input type="radio" id="check" class="user" name="payment" value="Check">
+                                <label for="check">Check</label>
+                                <input type="radio" id="card" class="user" name="payment" value="Card">
+                                <label for="card">Card</label><br>
+                            </div>
+
                         </div>
                         <div class="form-group">
                             <input type="tel" id="phone" name="phone" placeholder="1234567890" maxlength="12" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
