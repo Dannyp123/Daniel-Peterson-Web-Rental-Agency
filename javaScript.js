@@ -21,13 +21,13 @@ function settingUpInventory() {
   }
 }
 
-function workingCart() {
-  const cart = document.querySelector("#cart");
-  const cartLink = document.querySelector("#cart-link");
-  cartLink.addEventListener("click", function() {
-    cart.style.display = "block";
-  });
-}
+// function workingCart() {
+//   const cart = document.querySelector("#cart");
+//   const cartLink = document.querySelector("#cart-link");
+//   cartLink.addEventListener("click", function() {
+//     cart.style.display = "block";
+//   });
+// }
 
 function workingForms() {
   const formLink = document.querySelector("#checkout-link");
@@ -76,5 +76,5 @@ function addingToCart() {
 }
 
 settingUpInventory();
-workingCart();
+// workingCart();
 workingCartForms();

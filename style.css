@@ -29,7 +29,7 @@ body {
   display: block;
 }
 /* FOR LAPTOPS AND TABLETS */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 950px) {
   .card-body {
     grid-template-columns: 1fr 1fr;
     margin: 20px;
