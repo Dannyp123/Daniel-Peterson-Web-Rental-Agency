@@ -60,7 +60,7 @@
                     <h5 class="modal-title">Checkout Info</h5>
                 </div>
                 <div class="modal-body">
-                    <form class="form-body">
+                    <form class="form-body" onsubmit="confirmMessage()">
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label for="validationServer01">First name</label>
@@ -202,7 +202,7 @@
         <div class="itemCard card mb-4 mt-4">
             <div class="card-body">
                 <div class="pb-5">
-                    <img id="car-image" class="pb-5 pt-3" src="{{image}}">
+                    <img id="car-image" class="pb-5 pt-3" src="{{vehicle.image}}">
                     <!-- This is the button that takes out of stock and adds a number to the cart -->
                     <button id="rentingButton" class="btn btn-primary py-3 px-5 text-center rentButton" type="button" name="firstRentBtn" onclick="rentItem({{index}})">
                         <h3 class=font-weight-bold><i class="fas fa-cart-plus"></i> Add to cart</h3>
@@ -213,44 +213,44 @@
                         <i class="fas fa-car"></i> Make:
                     </h1>
                     <h2 class="make-info">
-                        {{make}}
+                        {{vehicle.make}}
                     </h2>
                     <h1 class="model-header font-weight-bold">
                         Model:
                     </h1>
                     <h2 class="model-info">
-                        {{model}}
+                        {{vehicle.model}}
                     </h2>
                     <h1 class="year-header font-weight-bold">
                         Year:
                     </h1>
                     <h2 class="year-info">
-                        {{year}}
+                        {{vehicle.year}}
                     </h2>
                     <h1 class="stock-header font-weight-bold">
                         In-stock:
                     </h1>
                     <h2 class="cardStock">
-                        {{instock}}
+                        {{vehicle.instock}}
                     </h2>
                     <h1 class="price-header font-weight-bold">
                         <i class="far fa-money-bill-alt"></i> Price per day:
                     </h1>
                     <h2 class="price-info">
-                        {{priceperday}}
+                        {{vehicle.priceperday}}
                     </h2>
                     <h1 class="color-header font-weight-bold">
                         Color:
                     </h1>
 
                     <h2 class="color-info">
-                        {{color}}
+                        {{vehicle.color}}
                     </h2>
                     <h1 class="description-header font-weight-bold">
                         Description:
                     </h1>
                     <h2 class="description-info text-center">
-                        {{description}}
+                        {{vehicle.description}}
                     </h2>
                 </div>
             </div>

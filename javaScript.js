@@ -1,19 +1,11 @@
 function settingUpInventory() {
   var inventoryItems = document.querySelector("#template-inventory").innerHTML;
   var template = Handlebars.compile(inventoryItems);
-  // for (vehicle of INVENTORY.vehicles) {
   for (index in INVENTORY.vehicles) {
     let vehicle = INVENTORY.vehicles[index];
     var html = template({
       index: index,
-      make: `${vehicle.make}`,
-      model: `${vehicle.model}`,
-      year: `${vehicle.year}`,
-      description: vehicle.description,
-      instock: `${vehicle.instock}`,
-      priceperday: `$${vehicle.priceperday}`,
-      color: `${vehicle.color}`,
-      image: vehicle.image
+      vehicle: vehicle
     });
     document
       .querySelector("#insert-template-here")
@@ -24,7 +16,8 @@ function settingUpInventory() {
 function workingForms() {
   const formLink = document.querySelector("#checkout-link");
   var header = document.querySelector("#shoppingCartNum");
-  if (header.innerText > 0) {
+  var myNum = Number(header.innerText);
+  if (myNum > 0) {
     formLink.style.display = "block";
   } else {
     formLink.style.display = "none";
@@ -65,4 +58,20 @@ function showingCart() {
   Cart.innerText = Number(Cart.innerText) + 1;
 }
 
+function confirmMessage() {
+  var choice = confirm(
+    `Your order of ${
+      document.querySelector("#shoppingCartNum").innerText
+    } vehicle(s) for a total of $${
+      document.querySelector("#totalCartNum").innerText
+    } per day will now be processed. Please confirm order.`
+  );
+  if (choice) {
+    alert("Thank you for your business. Please come again soon.");
+  } else {
+    alert(
+      "Sorry if there was any problems with our services, but your order has been cancelled. Thanks for your time."
+    );
+  }
+}
 settingUpInventory();
