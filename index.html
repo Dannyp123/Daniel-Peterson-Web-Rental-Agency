@@ -256,6 +256,24 @@
             </div>
         </div>
     </script>
+    <script id="thankyou-page" type="text/x-handlebars-template">
+        <nav id="top-nav" class="nav position-sticky navbar fixed-top navbar-expand-lg navbar-light bg-primary p-2 d-flex justify-content-between">
+                <h4 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Danny's Rent-a-Ride</h4></nav>
+        <div class="container">
+            <div class="card mb-4 mt-4">
+                <h1 class="text-center text-dark">{{greeting}}</h1>
+            </div>
+            <div class="card">
+                <h2 class="text-center text-dark">
+                    <p>{{items}}</p>
+                    <p>{{total}}</p>
+                </h2>
+                <h3 class="text-center text-dark">
+                    {{paragraph}}
+                </h3>
+            </div>
+        </div>
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

@@ -58,6 +58,24 @@ function showingCart() {
   Cart.innerText = Number(Cart.innerText) + 1;
 }
 
+function thankyouTemplate() {
+  var email = document.querySelector("#validationServerUsername").value;
+  var inventoryItems = document.querySelector("#thankyou-page").innerHTML;
+  var template = Handlebars.compile(inventoryItems);
+  var html = template({
+    greeting:
+      "Thank you for visiting Danny's Rent-a-Ride, Have a blessed day!!",
+    paragraph: `We will email you at ${email} to confirm your order.`,
+
+    items: `Number of items:
+    ${document.querySelector("#shoppingCartNum").innerText}`,
+
+    total: `Total for those items:
+    $${document.querySelector("#totalCartNum").innerText}`
+  });
+  document.body.innerHTML = html;
+}
+
 function confirmMessage() {
   var choice = confirm(
     `Your order of ${
@@ -67,11 +85,7 @@ function confirmMessage() {
     } per day will now be processed. Please confirm order.`
   );
   if (choice) {
-    alert("Thank you for your business. Please come again soon.");
-  } else {
-    alert(
-      "Sorry if there was any problems with our services, but your order has been cancelled. Thanks for your time."
-    );
+    thankyouTemplate();
   }
 }
 settingUpInventory();
