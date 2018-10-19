@@ -78,7 +78,9 @@ function thankyouTemplate() {
     phone: "(872)-785-3235",
 
     address1: "3422 West Central Avenue",
-    address2: "Columbia, MT 34232"
+    address2: "Columbia, MT 34232",
+
+    website: "https://dannyp123.github.io/Daniel-Peterson-Web-Rental-Agency/"
   });
   document.body.innerHTML = html;
 }
@@ -96,3 +98,4 @@ function confirmMessage() {
   }
 }
 settingUpInventory();
+thankyouTemplate();
