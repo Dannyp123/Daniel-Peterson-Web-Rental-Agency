@@ -22,7 +22,7 @@
 
 <body>
     <nav id="top-nav" class="nav position-sticky navbar fixed-top navbar-expand-lg navbar-light bg-primary p-2 d-flex justify-content-between">
-        <h1 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Danny's Rent-a-Ride</h1>
+        <h4 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Danny's Rent-a-Ride</h4>
         <button type="button" class="btn cart-button nav-item" data-toggle="modal" data-target="#cart"><span id="cartButton"></span>
             <i class="fas fa-shopping-cart"></i>
         </button>
@@ -34,17 +34,20 @@
                     <h5 class="modal-title">Shopping Cart</h5>
                 </div>
                 <div class="modal-body">
+                    <!-- This uses the shoppingCartNum -->
                     <div id="cart-items">
                         <h3 class="pt-3"><i class="fas fa-shopping-cart pr-1"></i>Items:</h3>
                         <h3 id="shoppingCartNum">0</h3>
                         <h3 class="pt-3"><i class="fas fa-dollar-sign"></i> Total:</h3>
-                        <h3 class="totalCartNum">0</h3>
+                        <!-- This uses the totalCartNum which is total -->
+                        <h3 id="totalCartNum">0</h3>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button id="checkout-link" type="button" class="btn nav-link btn-success text-white" data-toggle="modal"
                         data-target="#check-out" data-dismiss="modal">Checkout
                     </button>
+
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue Shopping</button>
                 </div>
             </div>
@@ -61,7 +64,7 @@
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label for="validationServer01">First name</label>
-                                <input type="text" class="form-control" placeholder="First Name" pattern="[A-Za-z]+"
+                                <input type="text" class="form-control" placeholder="First Name" pattern="[A-Z a-z ]+"
                                     required>
                                 <div class="valid-feedback">
                                     Looks good!
@@ -69,7 +72,7 @@
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="validationServer02">Last name</label>
-                                <input type="text" class="form-control" pattern="[A-Za-z]+" placeholder="Last Name"
+                                <input type="text" class="form-control" pattern="[A-Z a-z ]+" placeholder="Last Name"
                                     required>
                                 <div class="valid-feedback">
                                     Looks good!
@@ -167,7 +170,7 @@
                         <div class="form-group">
                             <label for="validationServer06">Phone number</label>
                             <input type="tel" class="form-control" id="phone" name="phone" placeholder="1234567890"
-                                maxlength="12" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                                maxlength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
                             <div class="invalid-feedback">
                                 Please provide a valid phone number
                             </div>
@@ -200,6 +203,7 @@
             <div class="card-body">
                 <div class="pb-5">
                     <img id="car-image" class="pb-5 pt-3" src="{{image}}">
+                    <!-- This is the button that takes out of stock and adds a number to the cart -->
                     <button id="rentingButton" class="btn btn-primary py-3 px-5 text-center rentButton" type="button" name="firstRentBtn" onclick="rentItem({{index}})">
                         <h3 class=font-weight-bold><i class="fas fa-cart-plus"></i> Add to cart</h3>
                     </button>

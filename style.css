@@ -4,7 +4,6 @@ body {
 
 .nav-bar-font {
   font-family: "Chonburi";
-  font-size: 18pt;
 }
 
 .cart-button {
@@ -34,7 +33,7 @@ body {
 }
 
 /* FOR SMALL TABLETS AND PHONES */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 330px) {
   .card-body {
     grid-template-columns: 1fr;
     margin-left: 12px;
@@ -50,10 +49,8 @@ body {
     font-size: 12px;
   }
 }
+
 @media screen and (min-width: 400px) {
-  .card-body {
-    grid-template-columns: 1fr, 1fr;
-  }
   #car-image {
     position: relative;
     left: 22px;

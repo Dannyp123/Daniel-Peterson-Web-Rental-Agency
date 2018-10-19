@@ -41,7 +41,7 @@ function removeStock(cardIndex) {
 function rentItem(index) {
   var cards = document.querySelectorAll(".itemCard");
   var item = INVENTORY.vehicles[index];
-  var totalArea = document.querySelector(".totalCartNum");
+  var totalArea = document.querySelector("#totalCartNum");
   if (cards[index].querySelector(".cardStock").innerText > 0) {
     totalArea.innerHTML = item.priceperday + Number(totalArea.innerHTML);
     removeStock(index);
