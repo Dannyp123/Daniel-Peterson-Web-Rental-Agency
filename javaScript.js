@@ -71,7 +71,14 @@ function thankyouTemplate() {
     ${document.querySelector("#shoppingCartNum").innerText}`,
 
     total: `Total for those items:
-    $${document.querySelector("#totalCartNum").innerText}`
+    $${document.querySelector("#totalCartNum").innerText}`,
+
+    email: "Danny'sRent-a-Ride@gmail.com",
+
+    phone: "(872)-785-3235",
+
+    address1: "3422 West Central Avenue",
+    address2: "Columbia, MT 34232"
   });
   document.body.innerHTML = html;
 }
