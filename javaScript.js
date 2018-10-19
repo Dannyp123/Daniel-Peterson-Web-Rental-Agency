@@ -82,7 +82,7 @@ function thankyouTemplate() {
 
     website: "https://dannyp123.github.io/Daniel-Peterson-Web-Rental-Agency/"
   });
-  document.body.innerHTML = html;
+  document.querySelector("#insert-new-template-here").innerHTML = html;
 }
 
 function confirmMessage() {
