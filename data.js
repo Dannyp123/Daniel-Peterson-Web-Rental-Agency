@@ -55,6 +55,17 @@ const INVENTORY = {
       priceperday: 125,
       image: "images-using/chevy-camero.jpg"
     },
+    {
+      make: "Chevy",
+      model: "Chevelle",
+      color: "Black",
+      year: 1970,
+      description:
+        "1970 Chevy Chevelle, classic black with white racing stripes. New 454 SS and new XD series flat black rims",
+      instock: 3,
+      priceperday: 85,
+      image: "images-using/chevy-chevelle.jpg"
+    },
 
     {
       make: "Dodge",
@@ -66,6 +77,17 @@ const INVENTORY = {
       instock: 21,
       priceperday: 215,
       image: "images-using/dodge-challenger2.jpg"
+    },
+    {
+      make: "Dodge",
+      model: "Ram 2500 Longhorn",
+      color: "White",
+      year: 2012,
+      description:
+        "2012 Dodge Ram 2500, comes with a Cummins diesel engine in it. 3 inch lift kit with BARON Machined w/Black Accent rims.",
+      instock: 12,
+      priceperday: 75,
+      image: "images-using/dodge-ram.jpg"
     },
     {
       make: "Jeep",

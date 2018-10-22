@@ -62,10 +62,10 @@ function thankyouTemplate() {
   var email = document.querySelector("#email-info").value;
   var inventoryItems = document.querySelector("#thankyou-page").innerHTML;
   var template = Handlebars.compile(inventoryItems);
-  var items = `Number of items: ${
+  var items = `Number of vehicle(s): ${
     document.querySelector("#shoppingCartNum").innerText
   }`;
-  var total = `Total for those items:
+  var total = `Total for those vehicle(s):
   $${document.querySelector("#totalCartNum").innerText}`;
 
   var html = template({
