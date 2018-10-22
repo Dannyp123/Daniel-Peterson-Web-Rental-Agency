@@ -90,13 +90,18 @@ function thankyouTemplate() {
 }
 
 function confirmMessage() {
-  order = document.querySelector("#orderButton");
-  page = document.querySelector(".page");
+  const order = document.querySelector("#orderButton");
+  const page = document.querySelector(".page");
   order.addEventListener("click", function(event) {
     event.preventDefault();
     thankyouTemplate();
     page.style.display = "none";
   });
+}
+
+function tryit() {
+  const input = document.querySelector("#orderButton");
+  input.addEventListener("click", confirmMessage);
 }
 
 settingUpInventory();

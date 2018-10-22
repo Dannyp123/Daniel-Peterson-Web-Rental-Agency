@@ -182,7 +182,7 @@
                                 <input type="radio" id="card" class="user" name="payment" value="Card">
                                 <label for="card">Card</label>
                             </div>
-                            <button id="orderButton" class="btn btn-primary" type="submit" onclick="confirmMessage()">Order</button>
+                            <button id="orderButton" class="btn btn-primary" onclick="tryit()" type="submit">Order</button>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -259,26 +259,26 @@
     <script id="thankyou-page" type="text/x-handlebars-template">
         <div class="container">
             <div class="card mb-4 mt-4">
-                <h4 class="text-center text-dark font-weight-bold" style="font-family: 'Cinzel'">{{greeting}}</h4>
+                <h3 class="text-center text-dark font-weight-bold">{{greeting}}</h3>
             </div>
             <div class="card">
-                <h2 class="text-center text-dark">
+                <h3 class="text-center text-dark">
                     <p>{{items}}</p>
                     <p>{{total}}</p>
-                </h2>
-                <h3 class="text-center text-dark">
-                    {{paragraph}}
                 </h3>
+                <h4 class="text-center text-dark">
+                    {{paragraph}}
+                </h4>
             </div>
             <div class="card mt-4 text-center">
-                <span class="font-weight-bold"  style="font-family: 'Cinzel'">Email: </span>
+                <span class="font-weight-bold" >Email: </span>
                 <p>{{email}}</p>
-                <span class="font-weight-bold"  style="font-family: 'Cinzel'">Phone: </span>
+                <span class="font-weight-bold" >Phone: </span>
                 <p>{{phone}}</p>
-                <span class="font-weight-bold"  style="font-family: 'Cinzel'">Address:</span>
+                <span class="font-weight-bold" >Address:</span>
                 <p>{{address1}}</p>
                 <p>{{address2}}</p>
-                <span class="font-weight-bold"  style="font-family: 'Cinzel'">Website:</span>
+                <span class="font-weight-bold" >Website:</span>
                 <p><a class="text-dark" href="{{website}}" target="_blank" >Click Here</a></p>
             </div>
         </div>
