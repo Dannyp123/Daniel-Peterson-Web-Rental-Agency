@@ -21,8 +21,7 @@
 
 </head>
 
-<body>
-    <div class="insert-new-template-here"></div>
+<body id="insert-new-template-here">
     <nav id="top-nav" class="nav position-sticky navbar fixed-top navbar-expand-lg navbar-light bg-primary p-2 d-flex justify-content-between">
         <h4 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Danny's Rent-a-Ride</h4>
         <button type="button" class="btn cart-button nav-item" data-toggle="modal" data-target="#cart"><span id="cartButton"></span>
@@ -62,20 +61,18 @@
                     <h5 class="modal-title">Checkout Info</h5>
                 </div>
                 <div class="modal-body">
-                    <form class="form-body" onsubmit="confirmMessage()">
+                    <form class="form-body" onsubmit="thankyouTemplate()">
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label for="validationServer01">First name</label>
-                                <input type="text" class="form-control" placeholder="First Name" pattern="[A-Z a-z ]+"
-                                    required>
+                                <input type="text" class="form-control" placeholder="First Name" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="validationServer02">Last name</label>
-                                <input type="text" class="form-control" pattern="[A-Z a-z ]+" placeholder="Last Name"
-                                    required>
+                                <input type="text" class="form-control" placeholder="Last Name" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -83,10 +80,7 @@
                             <div class="col-md-4 mb-3">
                                 <label for="validationServerUsername">Email</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                                    </div>
-                                    <input type="email" class="form-control" id="validationServerUsername" placeholder="Email"
+                                    <input type="email" class="form-control" id="email-info" placeholder="Email"
                                         aria-describedby="inputGroupPrepend3" required>
                                     <div class="invalid-feedback">
                                         Please choose a Email.

@@ -15,8 +15,8 @@ function settingUpInventory() {
 
 function workingForms() {
   const formLink = document.querySelector("#checkout-link");
-  var header = document.querySelector("#shoppingCartNum");
-  var myNum = Number(header.innerText);
+  const header = document.querySelector("#shoppingCartNum");
+  const myNum = Number(header.innerText);
   if (myNum > 0) {
     formLink.style.display = "block";
   } else {
@@ -59,21 +59,25 @@ function showingCart() {
 }
 
 function thankyouTemplate() {
-  var email = document.querySelector("#validationServerUsername").value;
+  var email = document.querySelector("#email-info").value;
   var inventoryItems = document.querySelector("#thankyou-page").innerHTML;
   var template = Handlebars.compile(inventoryItems);
+  var items = `Number of items: ${
+    document.querySelector("#shoppingCartNum").innerText
+  }`;
+  var total = `Total for those items:
+  $${document.querySelector("#totalCartNum").innerText}`;
+
   var html = template({
     greeting:
       "Thank you for visiting Danny's Rent-a-Ride, Have a blessed day!!",
     paragraph: `We will email you at ${email} to confirm your order.`,
 
-    items: `Number of items:
-    ${document.querySelector("#shoppingCartNum").innerText}`,
+    items: items,
 
-    total: `Total for those items:
-    $${document.querySelector("#totalCartNum").innerText}`,
+    total: total,
 
-    email: "Danny'sRent-a-Ride@gmail.com",
+    email: "Dannys Rent-a-Ride@gmail.com",
 
     phone: "(872)-785-3235",
 
@@ -85,16 +89,21 @@ function thankyouTemplate() {
   document.querySelector("#insert-new-template-here").innerHTML = html;
 }
 
-function confirmMessage() {
-  var choice = confirm(
-    `Your order of ${
-      document.querySelector("#shoppingCartNum").innerText
-    } vehicle(s) for a total of $${
-      document.querySelector("#totalCartNum").innerText
-    } per day will now be processed. Please confirm order.`
-  );
-  if (choice) {
-    thankyouTemplate();
-  }
-}
+// var order = document.querySelector("#orderButton");
+// order.addEventListener("click", function(event) {
+//   event.preventDefault();
+// });
+
+// function confirmMessage() {
+//   var choice = confirm(
+//     `Your order of ${
+//       document.querySelector("#shoppingCartNum").innerText
+//     } vehicle(s) for a total of $${
+//       document.querySelector("#totalCartNum").innerText
+//     } per day will now be processed. Please confirm order.`
+//   );
+//   if (choice) {
+//     thankyouTemplate;
+//   }
+// }
 settingUpInventory();
