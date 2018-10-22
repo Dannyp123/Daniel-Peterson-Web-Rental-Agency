@@ -22,7 +22,7 @@
 </head>
 
 <body id="insert-new-template-here">
-    <nav id="top-nav" class="nav position-sticky navbar fixed-top navbar-expand-lg navbar-light bg-primary p-2 d-flex justify-content-between">
+    <nav id="top-nav" class="nav position-sticky navbar fixed-top navbar-expand-lg navbar-light bg-primary d-flex justify-content-between">
         <h4 class="font-weight-bold nav-bar-font text-white"><i class="fas fa-store"></i> Danny's Rent-a-Ride</h4>
         <button type="button" class="btn cart-button nav-item" data-toggle="modal" data-target="#cart"><span id="cartButton"></span>
             <i class="fas fa-shopping-cart"></i>
@@ -61,7 +61,7 @@
                     <h5 class="modal-title">Checkout Info</h5>
                 </div>
                 <div class="modal-body">
-                    <form class="form-body" onsubmit="thankyouTemplate()">
+                    <form class="form-body" onsubmit="confirmMessage()">
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label for="validationServer01">First name</label>
@@ -195,6 +195,7 @@
         </div>
     </div>
     <script id="template-inventory" type="text/x-handlebars-template">
+        <h1 class="type-header text-center font-weight-bold text-white pt-3">*{{vehicle.make}}*</h1>
         <div class="itemCard card mb-4 mt-4">
             <div class="card-body">
                 <div class="pb-5">

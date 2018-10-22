@@ -94,16 +94,16 @@ function thankyouTemplate() {
 //   event.preventDefault();
 // });
 
-// function confirmMessage() {
-//   var choice = confirm(
-//     `Your order of ${
-//       document.querySelector("#shoppingCartNum").innerText
-//     } vehicle(s) for a total of $${
-//       document.querySelector("#totalCartNum").innerText
-//     } per day will now be processed. Please confirm order.`
-//   );
-//   if (choice) {
-//     thankyouTemplate;
-//   }
-// }
+function confirmMessage() {
+  var choice = confirm(
+    `Your order of ${
+      document.querySelector("#shoppingCartNum").innerText
+    } vehicle(s) for a total of $${
+      document.querySelector("#totalCartNum").innerText
+    } per day will now be processed. Please confirm order.`
+  );
+  if (choice) {
+    thankyouTemplate();
+  }
+}
 settingUpInventory();

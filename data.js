@@ -121,6 +121,17 @@ const INVENTORY = {
       instock: 4,
       priceperday: 375,
       image: "images-using/Bently-contenialGT2.jpg"
+    },
+    {
+      make: "Bentley",
+      model: "Bentayga",
+      color: "Black",
+      year: 2018,
+      description:
+        "2018 Bentley Bentayga, comes with a heafty W-12 engine. Great for big families or just one person. Has a whopping 600hp. Still for the casual or the classy",
+      instock: 4,
+      priceperday: 400,
+      image: "images-using/Bently-Bentayag.jpg"
     }
   ]
 };
