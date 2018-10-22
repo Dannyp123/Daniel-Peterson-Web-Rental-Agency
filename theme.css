@@ -5776,7 +5776,7 @@ button.close {
 }
 
 .modal-backdrop.show {
-  opacity: 0.5;
+  display: none;
 }
 
 .modal-header {

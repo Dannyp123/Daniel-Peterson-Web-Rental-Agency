@@ -89,21 +89,14 @@ function thankyouTemplate() {
   document.querySelector("#insert-new-template-here").innerHTML = html;
 }
 
-// var order = document.querySelector("#orderButton");
-// order.addEventListener("click", function(event) {
-//   event.preventDefault();
-// });
-
 function confirmMessage() {
-  var choice = confirm(
-    `Your order of ${
-      document.querySelector("#shoppingCartNum").innerText
-    } vehicle(s) for a total of $${
-      document.querySelector("#totalCartNum").innerText
-    } per day will now be processed. Please confirm order.`
-  );
-  if (choice) {
+  order = document.querySelector("#orderButton");
+  page = document.querySelector(".page");
+  order.addEventListener("click", function(event) {
+    event.preventDefault();
     thankyouTemplate();
-  }
+    page.style.display = "none";
+  });
 }
+
 settingUpInventory();
