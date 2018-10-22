@@ -101,7 +101,8 @@ function confirmMessage() {
 
 function tryit() {
   const input = document.querySelector("#orderButton");
-  input.addEventListener("click", confirmMessage);
+  input.addEventListener("click", confirmMessage());
 }
 
+tryit();
 settingUpInventory();
